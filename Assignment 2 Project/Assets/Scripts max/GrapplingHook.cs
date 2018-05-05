@@ -19,7 +19,7 @@ public class GrapplingHook : MonoBehaviour {
 	void Update(){
 
 		// firing the hook
-	if (Input.GetMouseButtonDown (0) && fired == false)
+	if (Input.GetMouseButtonDown (1) && fired == false)
 			fired = true;
 
 		if (fired == true) {
