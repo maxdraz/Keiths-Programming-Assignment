@@ -4,23 +4,18 @@ using UnityEngine;
 
 public class EnemyData : MonoBehaviour {
 
-	public int health = 100;
+	public float health = 100f;
 
+	public void TakeDamage(float damageTaken){
 
-	// Use this for initialization
-	void Start () {
-		
-	}
-	
-	// Update is called once per frame
-	void Update () {
+		health -= damageTaken;
+
 		if (health <= 0) {
-			Destroy (this.gameObject);
+			Die ();
 		}
 	}
 
-	public void TakeDamage(int damageOnHit){
-
-		health -= damageOnHit;
+	void Die(){
+		Destroy (gameObject);
 	}
 }
